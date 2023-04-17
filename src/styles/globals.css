@@ -18,10 +18,35 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
     rgb(var(--background-start-rgb));
+}
+
+/* Classes buttons field map*/
+
+.calcContainer {
+  width: 240px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  /* gap: 10px 10px; */
+  grid-auto-flow: row;
+  grid-template-areas:
+    'special-char special-char special-char operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators';
+}
+
+.special-char {
+  grid-area: special-char;
+}
+
+.operators {
+  grid-area: operators;
+}
+
+.numbers {
+  grid-area: numbers;
 }
